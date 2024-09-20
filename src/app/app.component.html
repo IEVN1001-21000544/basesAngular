@@ -1,15 +1,19 @@
-<h1>Hola mundo</h1>
+<div class="container">
+  <div class="">
+    <h1>Hola mundo</h1>
 
-<div>{{title}}</div>
-<div>La suma de 2 + 2 {{2+2}}</div>
-
-<div>El doble del numero 3 es {{duplicarNumero(3)}}</div>
+<!-- Interpolación -->
 <div>
-  <h2>Matricula: {{alumno.matricula}}</h2>
-  <h2>Nombre: {{alumno.nombre |uppercase}}</h2> <!-- Para ponerle en mayusculas el nombre -->
-  <h2>Fecha: {{alumno.fechaInscripcion| date:"dd-MM-yy"}}</h2> <!-- Se le pone formato Date o de fecha -->
-  <h2>Pago:{{alumno.pago | currency}} </h2> <!-- Se le pone un formato de pago, sigo de pesos y mas -->
-  <hr>
-  <app-product-list></app-product-list>
+  {{title}}
 </div>
-<!-- Alt + shift + a  para comentar -->
+<div>
+  La suma de 2+2 es: {{2+2}}
+  <br>
+  El doble de el número 3 es {{duplicarNumero(3)}}
+</div>
+<div>
+</div>
+<hr>
+<app-product-list></app-product-list>
+  </div>
+</div>

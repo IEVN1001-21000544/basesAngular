@@ -21,7 +21,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Imagen</th>
+                        <th>
+                            <button (click)="mostrarImagen()" class="btn btn-primary" type="button">
+                            Imagen</button>
+                        </th>
                         <th>Modelo</th>
                         <th>Descripcion</th>
                         <th>Año</th>
@@ -31,14 +34,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>{{productos[0].ImagenUrl}}</td>
-                        <td>{{productos[0].Modelo}}</td>
-                        <td>{{productos[0].Descipcion}}</td>
-                        <td>{{productos[0].Year}}</td>
-                        <td>{{productos[0].Precio}}</td>
-                        <td>{{productos[0].Color}}</td>
-                        <td>{{productos[0].}}</td>
+                    <tr *ngFor="let producto of productos">
+                        <td *ngIf="muestraImg">
+                            <img [src]="producto.ImagenUrl"
+                            [title]="producto.Modelo"
+                            [style.width.px]="imageWidth"
+                            [style.margin.px]="imageMargin"
+                            >
+                        </td>
+                        <td>{{producto.Modelo}}</td>
+                        <td>{{producto.Descipcion}}</td>
+                        <td>{{producto.Year|date}}</td>
+                        <td>{{producto.Precio|currency}}</td>
+                        <td>{{producto.Marca}}</td>
+                        <td>{{producto.Color}}</td>
                     </tr>
                 </tbody>
             </table>
