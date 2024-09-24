@@ -7,14 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basesAngular'; 
-
-duplicarNumero(x:number):number{
-  return x*2;
-}
-alumno={
-  matricula: 21000544,
-  nombre: 'Miguel',
-  fechaInscripcion:new Date(),
-  pago:2220
-};
 }
