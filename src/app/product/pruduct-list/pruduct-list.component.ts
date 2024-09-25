@@ -11,7 +11,7 @@ export class PruductListComponent {
   imageWidth:number=50;
   imageMargin:number=2;
   muestraImg:boolean=true;
-  listFilter:string= '';
+  listFilter:string=" ";
   mostrarImagen(): void{
     this.muestraImg=!this.muestraImg
   }
