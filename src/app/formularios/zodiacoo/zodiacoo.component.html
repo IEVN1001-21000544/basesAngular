@@ -1,0 +1,39 @@
+<div class="cPrincipal">
+    <div class="cFormulario">
+    
+    <div class="c1">
+        <h2 class="titulos">Datos personales</h2>  
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre" type="text" [(ngModel)]="nombre">
+        <label for="paterno">Paterno:</label>
+        <input id="paterno" name="paterno" type="text" [(ngModel)]="paterno">
+        <label for="materno">Materno:</label>
+        <input id="materno" name="materno" type="text" [(ngModel)]="materno">
+
+        <h2 class="titulos">Fecha de nacimiento</h2>
+        <label for="Dia">Día</label>
+        <input id="Dia" name="Dia" class="inputFecha" type="number" min="1" max="31" [(ngModel)]="dia">
+        <label for="Mes">Mes</label>
+        <input id="Mes" name="Mes" class="inputFecha" type="number" min="1" max="12" [(ngModel)]="mes">
+        <label for="Anio">Año</label>
+        <input id="Anio" name="Anio" class="inputFecha" type="number" [(ngModel)]="anio" (change)="calcularZodiaco()">
+
+        <h2 class="titulos">Sexo</h2>
+        <div class="sexo-opciones">
+            <input id="M" name="sexo" type="radio" value="Masculino" [(ngModel)]="sexo">
+            <label class="las" for="M">Masculino</label>
+            <input id="F" name="sexo" type="radio" value="Femenino" [(ngModel)]="sexo">
+            <label class="las" for="F">Femenino</label>
+        </div>
+
+        <button type="button" (click)="calcularZodiaco()">Imprimir</button>
+    </div>
+    
+    <div class="c2">
+        <h1 *ngIf="nombre">Hola <i>{{nombre}} {{paterno}} {{materno}}</i></h1>
+        <p *ngIf="edad">Tienes {{edad}} años</p>
+        <p *ngIf="signoSeleccionado">Tu signo zodiacal chino es:</p>
+        <img class="imagen-signo" *ngIf="signoSeleccionado" alt="Zodiacoo" [src]="signoSeleccionado.imagenUrl">
+        <div class="signo" *ngIf="signoSeleccionado">{{signoSeleccionado.signo}}</div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+.cPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow:10px 10px 15px #333;
+    border:1px solid black;
+}
+.cFormulario {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+}
+.c1 {
+    flex: 1;
+    margin-right: 20px;
+    width: 50%;
+}
+.titulos {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+input[type="radio"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="radio"] {
+    width: 10%;
+}
+.sexo-opciones {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.las
+{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+button {
+    padding: 10px 15px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.c2 {
+    flex: 1;
+    padding: 20px;
+    border-left: 2px solid #ddd;
+    width: 35%;
+    text-align: center;
+}
+.c2 h1, .c2 p {
+    margin: 10px 0;
+}
+.signo {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #e7f1ff;
+}
+.imagen-signo {
+    width: 200px; 
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    border-radius: 30px;
+}

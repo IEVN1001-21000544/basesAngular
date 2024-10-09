@@ -10,7 +10,7 @@ export class ProductoFilterPipe implements PipeTransform {
     let filter: string = args ? args.toLocaleLowerCase():''; 
 
     return filter? value.filter((producto:IProductos)=>
-     producto.Modelo.toLocaleLowerCase().indexOf(filter)!=-1 
+    producto.Modelo.toLocaleLowerCase().indexOf(filter)!=-1 
     ):value;
   }
 }

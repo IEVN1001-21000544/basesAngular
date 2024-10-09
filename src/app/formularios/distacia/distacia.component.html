@@ -1,25 +1,22 @@
-<div>
+<--<div>
     <h1>Distancia entre dos numeros</h1>
     <form [formGroup]="formulario">
-
         <div>
-            <label>Numero X1:</label>
-            <input formControlName="numerox1" type="number">
+        <label for="nx1">Numero X1:</label>
+        <input id="nx1" formControlName="numerox1" type="number">
         </div>
         <div>
-            <label>Numero X2:</label>
-            <input formControlName="numerox2" type="number">
-        </div>
-
-        <div>
-            <label>Numero Y1:</label>
-            <input formControlName="numeroy1" type="number">
+        <label for="nx2">Numero X2:</label>
+        <input id="nx2" formControlName="numerox2" type="number">
         </div>
         <div>
-            <label>Numero Y2:</label>
-            <input formControlName="numeroy2" type="number">
+        <label for="ny1">Numero Y1:</label>
+        <input id="ny1" formControlName="numeroy1" type="number">
         </div>
-
+        <div>
+        <label for="ny2">Numero Y2:</label>
+        <input id="ny2" formControlName="numeroy2" type="number">
+        </div>
         <button (click)="distanciaNumeros()">Sumar</button>
         <h3>La distancia entre dos numeros es: {{resultado}} </h3>
     </form>

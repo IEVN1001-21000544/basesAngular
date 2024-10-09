@@ -8,7 +8,8 @@
                 Filtrar por:
             </div>
             <div class="col-md-4">
-                <input type="text" [(ngModel)]="listFilter" class="form-control" name="filter">
+                <label for="nom">Nombre</label>
+                <input id="nom" type="text" [(ngModel)]="listFilter" class="form-control" name="filter">
             </div>
         </div>
         <div class="row">
@@ -36,7 +37,7 @@
                 <tbody>
                     <tr *ngFor="let producto of productos | productoFilter:listFilter">
                         <td *ngIf="muestraImg">
-                            <img [src]="producto.ImagenUrl" 
+                            <img alt="" [src]="producto.ImagenUrl" 
                             [title]="producto.Modelo" 
                             [style.width.px]="imageWidth"
                             [style.margin.px]="imageMargin">
